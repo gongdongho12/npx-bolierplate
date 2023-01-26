@@ -42,7 +42,7 @@ async function main() {
     }
 
     console.log("Installing dependencies...");
-    execSync("npm install"); // package.json에 있는 의존성 설치
+    execSync("npm install --legacy-peer-deps"); // package.json에 있는 의존성 설치
 
     console.log("Removing useless files");
     execSync("npx rimraf ./.git"); // 이제 보일러플레이트 git과 관련된 내용 제거
